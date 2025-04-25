@@ -1,0 +1,1 @@
+SELECT * FROM team11_silverwrb.inventory;

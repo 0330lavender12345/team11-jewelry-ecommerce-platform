@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400..700&family=Kreon:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+footer{
+}
+.footer-container{
+    background-color: black;
+    opacity: 1;
+    width: 100%;
+    height: fit-content;
+
+    padding: 10px 20px 10px;
+
+    font-family:"Roboto Mono", monospace;
+    color: #707070;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/* .footerNav{
+    margin: 30px 0;
+}
+
+.footerNav ul{ 
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul li{
+    list-style: none;
+}
+.footerNav ul li a{
+    color: black;
+    margin: 20px;
+    text-decoration:none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+} 
+
+.footerNav ul li a:hover{
+    opacity: 1;
+} */
+
+
+/* 社群ICON設計 */
+
+.wrapper .footer-button{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    overflow: hidden;
+    /*  */
+    background: black;
+    border-radius: 500px;
+    cursor: pointer;
+    /*  */
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition:all 0.3s ease-out; 
+}
+.wrapper .footer-button:hover{
+    width: 150px;
+}
+
+
+
+.wrapper .footer-button .social-icon{
+    padding-left: 20%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 50px;
+    /*  */
+    transition: all 0.6s ease-out;
+}
+.wrapper .footer-button:nth-child(1):hover .social-icon{
+    /*  */
+    background: #4267B2;
+    width: 40px;
+    padding-left: 5%;
+}
+.wrapper .footer-button:nth-child(2):hover .social-icon{
+    /*  */
+    background: #1DA1F2;
+    width: 40px;
+    padding-left: 5%;
+}
+.wrapper .footer-button:nth-child(3):hover .social-icon{
+    /*  */
+    background: #E1306C;
+    width: 40px;
+    padding-left: 5%;
+}
+.wrapper .footer-button:nth-child(4):hover .social-icon{
+    /*  */
+    background: #333;
+    width: 40px;
+    padding-left: 5%;
+}
+.wrapper .footer-button:nth-child(5):hover .social-icon{
+    /*  */
+    background: #ff0000;
+    width: 40px;
+    padding-left: 5%;
+}
+
+.wrapper .footer-button .social-icon i{
+    font-size: 25px;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+.wrapper .footer-button:hover .social-icon i{
+    color: #fff;
+}
+.wrapper .footer-button span{
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: all 0.3s ease-out;
+
+}
+.wrapper .footer-button:nth-child(1):hover span{
+    /*  */
+    color: #4267B2;
+}
+.wrapper .footer-button:nth-child(2):hover span{
+    /*  */
+    color: #1DA1F2;
+}
+.wrapper .footer-button:nth-child(3):hover span{
+    /*  */
+    color: #E1306C
+}
+.wrapper .footer-button:nth-child(4):hover span{
+    /*  */
+    color: white;
+}
+.wrapper .footer-button:nth-child(5):hover span{
+    /*  */
+    color: #ff0000;
+}
+
+.footerbottom{
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px ;
+    opacity:1;
+
+    
+}
+
+.footerbottom p{
+    font-family: "Roboto Mono", monospace;
+    color: #707070;
+
+    transition:all 0.3s ease-out;
+}
+
+.footerbottom:hover p{
+
+    color: white;
+}

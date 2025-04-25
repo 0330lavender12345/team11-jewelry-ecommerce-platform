@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳頁面</title>
+    <link rel="stylesheet" href="assets/Css/checkpage.css">
+    <link rel="stylesheet" href="assets/Css/nav.css">
+    <link rel="stylesheet" href="assets/Css/body.css">
+    <link rel="stylesheet" href="assets/Css/text.css">
+    <link rel="stylesheet" href="assets/Css/footer.css">
+    <link rel="stylesheet" href="assets/Css/slider.css">
+    <link rel="stylesheet" href="assets/Css/background.css">
+    <link rel="stylesheet" href="assets/Css/search.css">
+    <!-- Boxicon css -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="assets/Js/sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <nav>
+            <div class="navtop">
+                <div class="logo">
+                    <i class='bx bx-menu-alt-left menu-icon'></i>              <!-- <div class="logo-name">MENU</div> -->
+                </div>
+                <div class="storename">
+                    <div class="business-mark"><i class='bx bxl-sketch' ></i></div>
+                    <span class="logo-name1">SwDW</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Type to search..">
+                    <div class="search-button">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <div class="cancel-button">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </div>
+                <script src="assets/Js/searchbox.js"></script>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class='bx bx-menu-alt-left menu-icon'></i>
+                    <span class="logo-name">MENU</span>
+                </div>
+                <div class="sidebar-content">
+                    <div class="lists">
+                        <ul>
+                            <li class="list">
+                                <a href="index.html" class="nav-link">
+                                    <i class="bx bx-home-alt icon"></i>
+                                    <span class="link">Home</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="login.html" class="nav-link">
+                                    <i class='bx bx-user icon'></i>
+                                    <span class="link">User</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="nav-link categories-button">
+                                    <i class='bx bx-category icon'></i>
+                                    <span class="link">Catagories</span>
+                                    <span class='bx bx-chevron-down sub-icon'></span>
+                                </a>
+                                <ul class="show">
+                                    <a href="all.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">ALL</span>
+                                        </li>
+                                    </a>
+                                    <a href="bracelet.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Bracelet</span>
+                                        </li>
+                                    </a>
+                                    <a href="necklace.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Necklace</span>
+                                        </li>
+                                    </a>
+                                    <a href="ring.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Ring</span>
+                                        </li>
+                                    </a>
+                                    <a href="earring.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Earring</span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="cart1.html" class="nav-link">
+                                    <i class='bx bx-cart icon'></i>
+                                    <span class="link">Cart</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-content">
+                        <li class="list">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-happy icon'></i>
+                                <span class="link">About Us</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-log-out icon'></i>
+                                <span class="link">Log Out</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="overlay"></section>
+
+        <div class="main-content">
+            <div class="main">
+                <ul>
+                    <li>
+                        <i class='icon bx bx-fullscreen'></i>
+                        <div class="active progress one">
+                            <p>1</p>
+                            <i class='ibx bx bx-check'></i>
+                        </div>
+                        <p class="text">加入購物車</p>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <i class='icon bx bx-clipboard'></i>
+                        <div class="active progress two">
+                            <p>2</p>
+                            <i class='ibx bx bx-check'></i>
+                        </div>
+                        <p class="text">填寫資料</p>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <i class='icon bx bx-credit-card'></i>
+                        <div class="active progress three">
+                            <p>3</p>
+                            <i class='ibx bx bx-check'></i>
+                        </div>
+                        <p class="text">進行付款</p>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <i class='icon bx bx-transfer-alt'></i>
+                        <div class="active progress four">
+                            <p>4</p>
+                            <i class='ibx bx bx-check'></i>
+                        </div>
+                        <p class="text">訂單處理中</p>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <i class='icon bx bx-map'></i>
+                        <div class="active progress five">
+                            <p>5</p>
+                            <i class='ibx bx bx-check'></i>
+                        </div>
+                        <p class="text">訂單已到達</p>
+                    </li>
+                </ul>
+            </div>
+
+            <form action="YOUR_BACKEND_URL" method="POST">
+                <div class="product-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>商品資料</th>
+                                <th>付款方式</th>
+                                <th>單件價格</th>
+                                <th>數量</th>
+                                <th>小計</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="assets/Images/ring01.jpg" alt="黑色空間戒指" class="product-image">
+                                    <div class="product-details">
+                                        <p>銀河星宇戒指</p>
+                                    </div>
+                                </td>
+                                <td>7-11 取貨付款</td>
+                                <td>NT$350</td>
+                                <td>
+                                    <input type="number" name="quantity" value="1" min="1" class="quantity-input">
+                                </td>
+                                <td>NT$350</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="text-align: right;"><strong>總價:</strong></td>
+                                <td>NT$350</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="checkout-button">
+                    <input class="botton" type="submit" value="完成結帳">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="wrapper">
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </div>
+                    <span>Facebook</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-twitter'></i>
+                    </div>
+                    <span>Twitter</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                    <span>Instagram</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-github'></i>
+                    </div>
+                    <span>Github</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-youtube'></i>
+                    </div>
+                    <span>Youtube</span>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2024</p>
+        </div>
+    </footer>
+    <script src="assets/Js/checkpage.js"></script>
+</body>
+</html>

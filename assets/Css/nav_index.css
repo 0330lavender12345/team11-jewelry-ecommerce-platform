@@ -1,0 +1,262 @@
+/* @font-face {
+    font-family: 辰宇落雁體 ;
+    src: url(../Fonts/ChenYuluoyan-Thin-Monospaced.ttf);
+} */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400..700&family=Kreon:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Kreon:wght@300..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sevillana&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+
+.sevillana-regular {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style:normal;
+}
+
+.storename{
+    display: flex;
+    position: fixed;
+    left: 46%;
+}
+.storename span{
+    font-family: "Sevillana", cursive;
+}
+.business-mark{
+    display: flex;
+    align-items: center;
+}
+.business-mark i{
+    font-size: 35px;
+    margin-right: 5px;
+    color: white;
+}
+
+span.logo-name1{
+    display: flex;
+    /* position: fixed; */
+    align-items: center;
+    left: 40%;
+    z-index: 3;
+    color:white;
+    font-size:20px;
+    /* font-weight: 500; */
+    text-align: center;
+    font-family: "Sevillana", cursive;;
+}
+
+nav{
+    position:sticky;
+    z-index: 1000;
+    top:0;
+    left:0;
+
+    display: flex;
+    align-items: center;
+
+    height: 70px;
+    width:100%;
+
+    background:black;
+    opacity: 1;
+}
+nav .navtop{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+
+    background-color:black ;
+    opacity: 1;
+}
+
+nav .logo img{
+    display: flex;
+    width: 3;
+}
+.logo .menu-icon{
+    color:white;
+    font-size: 35px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo .logo-name{
+    display: flex;
+    /* position: fixed; */
+    /* left: 40%; */
+    /* z-index: 3; */
+    color:white;
+    font-size:28px;
+    font-weight: 500;
+    text-align: center;
+    /* font-family: 辰宇落雁體; */
+    /* align-items: center; */
+}
+
+
+nav .sidebar{
+    position: fixed;
+    top:0;
+    left:-100%;
+
+    width:260px;
+    height: 100%;
+
+    padding: 20px 0;
+
+    background-color: black;
+    box-shadow: 0 5 10px rgba(250,250,250,0.3);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+
+}
+nav.open .sidebar{
+    left: 0;
+}
+
+.sidebar .sidebar-content{
+    padding:30px 16px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-content .list{
+    list-style: none;
+}
+.list .nav-link{
+    display: flex;
+    align-items: center;
+
+    padding :14px 12px;
+    margin: 8px 0;
+
+    border-radius: 8px;
+    text-decoration: none;
+}
+.list .sub-nav-link{
+    display: flex;
+    align-items: center;
+
+    /* padding :14px 12px; */
+    margin: 8px 0;
+
+    height: fit-content;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.list .sub-nav-link:hover{
+    background-color: white;
+}
+.list .sub-nav-link:hover .sub-list{
+    color: black;
+}
+
+.list .nav-link:hover{
+    background-color: white;
+
+}
+.nav-link .icon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: white;
+}
+
+.nav-link .link{
+    font-size: 16px;
+    color:white;
+    font-weight: 400;
+
+}
+
+.sub-list{
+    font-size: 13px;
+    padding-left: 50px;
+    color: white;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link{
+    color: black;
+}
+.bottom-content .nav-link:hover .icon,
+.bottom-content .nav-link:hover .link{
+    color: black;
+}
+
+.overlay{
+    position: fixed;
+    z-index: 100000;
+    top:0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+
+    background: rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+
+}
+
+nav.open ~ .overlay{
+    opacity: 1;
+    left: 260px;
+    pointer-events: auto;
+}
+
+
+
+.lists ul ul {
+    position: static;    
+}
+
+.lists ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+
+.lists ul li a{
+    position: relative;
+}
+
+
+
+
+.sub-icon {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    right: 50px;
+    color:#707070;
+    transform: translateY(-50%);
+    transition: transform 0.4;
+}
+
+/* .lists ul li :hover .sub-icon{
+    transform: translateY(-50%) rotate(-180deg);
+} */
+
+
+
+.show{
+    display: none;
+}
+
+.rotate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+

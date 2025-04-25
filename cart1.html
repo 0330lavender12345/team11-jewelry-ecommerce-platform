@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" href="assets/Css/cart1.css">
+    <link rel="stylesheet" href="assets/Css/nav.css">
+    <link rel="stylesheet" href="assets/Css/body.css">
+    <link rel="stylesheet" href="assets/Css/text.css">
+    <link rel="stylesheet" href="assets/Css/footer.css">
+    <link rel="stylesheet" href="assets/Css/slider.css">
+    <link rel="stylesheet" href="assets/Css/background.css">
+    <link rel="stylesheet" href="assets/Css/search.css">
+    <!-- Boxicon css -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="assets/Js/sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navtop">
+            <div class="logo">
+                <i class='bx bx-menu-alt-left menu-icon'></i>              <!-- <div class="logo-name">MENU</div> -->
+            </div>
+            <div class="storename">
+                <div class="business-mark"><i class='bx bxl-sketch' ></i></div>
+                <span class="logo-name1">SwDW</span>
+            </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Type to search..">
+                    <div class="search-button">
+                        <i class='bx bx-search' ></i>
+                    </div>
+                    <div class="cancel-button">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </div>
+            <script src="assets/Js/searchbox.js"></script>
+        </div>
+        <div class="sidebar">
+            <div class="logo">
+                <i class='bx bx-menu-alt-left menu-icon'></i>
+                <span class="logo-name">MENU</span>
+                <!-- <div class="logo-name">MENU</div> -->
+            </div>
+            <div class="sidebar-content">
+                <div class="lists">
+                    <ul>
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-home-alt icon" ></i>
+                                <span class="link">Home</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="login.html" class="nav-link">
+                                <i class='bx bx-user icon'></i>
+                                <span class="link">User</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="nav-link categories-button">
+                                <i class='bx bx-category icon'></i>
+                                <span class="link">Catagories</span>
+                                <span class='bx bx-chevron-down sub-icon'></span>
+                            </a>
+                            <ul class="show">
+                                <a href="all.html" class="sub-nav-link">
+                                    <li class="list">
+                                        <span class="sub-list">ALL</span>
+                                    </li>
+                                </a>
+                                <a href="bracelet.html" class="sub-nav-link">
+                                    <li class="list">
+                                        <span class="sub-list">Bracelet</span>
+                                    </li>
+                                </a>
+                                <a href="necklace.html" class="sub-nav-link">
+                                    <li class="list">
+                                        <span class="sub-list">Necklace</span>
+                                    </li>
+                                </a>
+                                <a href="ring.html" class="sub-nav-link">
+                                    <li class="list">
+                                        <span class="sub-list">Ring</span>
+                                    </li>
+                                </a>
+                                <a href="earring.html" class="sub-nav-link">
+                                    <li class="list">
+                                        <span class="sub-list">Earring</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a href="cart1.html" class="nav-link">
+                                <i class='bx bx-cart icon' ></i>
+                                <span class="link">Cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <li class="list">
+                        <a href="about_us.html" class="nav-link">
+                            <i class='bx bx-happy icon'></i>
+                            <span class="link">About Us</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="link">Log Out</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="overlay"></section>
+
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1>Shopping Cart</h1>
+                <div class="shopping">
+                    <img src="assets/Images/cart-regular-24.png" alt="購物車">
+                    <span class="quantity">0</span>
+                </div>
+            </header>
+
+            <!-- 表單開始 -->
+            <form action="YOUR_BACKEND_URL" method="POST">
+                <!-- 商品資訊區 -->
+                <div class="product-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>商品資料</th>
+                                <th>優惠</th>
+                                <th>單件價格</th>
+                                <th>數量</th>
+                                <th>小計</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="assets/Images/ring01.jpg" alt="" class="product-image">
+                                    <div class="product-details">
+                                        <p>銀河星宇戒指</p>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>NT$350</td>
+                                <td>
+                                    <input type="number" name="quantity" value="1" min="1" class="quantity-input">
+                                </td>
+                                <td>NT$350</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 結合資訊區 -->
+                <div class="info-container">
+                    <!-- 送貨及付款資訊區 -->
+                    <div class="information-section"> 
+                        <h2>選擇送貨及付款方式</h2>
+                        <div class="info-content">
+                            <label for="location">送貨地點:</label>
+                            <select name="location" id="location">
+                                <option value="store">門市取貨</option>
+                                <option value="home">宅配</option>
+                            </select>
+
+                            <label for="payment">付款方式:</label>
+                            <select name="payment" id="payment">
+                                <option value="credit-card">信用卡</option>
+                                <option value="atm">ATM 轉帳</option>
+                                <option value="cash-on-delivery">貨到付款</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 訂單資訊 -->
+                    <div class="order-info">
+                        <h2>訂單資訊</h2>
+                        <div class="order-details">
+                            <p>商品小計: <span>NT$350</span></p>
+                            <p>運費: <span>NT$60</span></p>
+                            <p>總計: <span>NT$410</span></p>
+                        </div>
+                        <input type="submit" id="checkout-btn" value="結帳">
+                    </div>
+                </div>
+            </form>
+            <!-- 表單結束 -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="wrapper">
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </div>
+                    <span>Facebook</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </div>
+                    <span>Twitter</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </div>
+                    <span>Instagram</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-github' ></i>
+                    </div>
+                    <span>Github</span>
+                </div>
+                <div class="footer-button">
+                    <div class="social-icon">
+                        <i class='bx bxl-youtube' ></i>
+                    </div>
+                    <span>Youtube</span>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2024</p>
+        </div>
+    </footer>
+    <script src="assets/Js/cart1.js"></script>
+</body>
+</html>

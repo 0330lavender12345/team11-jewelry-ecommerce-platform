@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <!--Nav 引入資訊-->
+    <link rel="stylesheet" href="assets/Css/nav.css">
+    <link rel="stylesheet" href="assets/Css/footer.css">
+    <link rel="stylesheet" href="assets/Css/search.css">
+    <!-- Boxicon css -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="assets/Js/sidebar.js"></script>
+    <!--member info 引入資訊-->
+    <link rel="stylesheet" href="assets/Css/member.css">
+    <link rel="stylesheet" href="assets/Css/member_info.css">
+</head>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<body>
+    <div class="bgcol">
+        <nav>
+            <div class="navtop">
+                <div class="logo">
+                    <i class='bx bx-menu-alt-left menu-icon'></i>              <!-- <div class="logo-name">MENU</div> -->
+                </div>
+                <div class="storename">
+                    <div class="business-mark"><i class='bx bxl-gitlab menu-icon'></i></div>
+                    <span class="logo-name1">SwDW</span>
+                </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Type to search..">
+                        <div class="search-button">
+                            <i class='bx bx-search' ></i>
+                        </div>
+                        <div class="cancel-button">
+                            <i class='bx bx-x'></i>
+                        </div>
+                    </div>
+                <script src="assets/Js/searchbox.js"></script>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class='bx bx-menu-alt-left menu-icon'></i>
+                    <span class="logo-name">MENU</span>
+                    <!-- <div class="logo-name">MENU</div> -->
+                </div>
+                <div class="sidebar-content">
+                    <div class="lists">
+                        <ul>
+                            <li class="list">
+                                <a href="index.html" class="nav-link">
+                                    <i class="bx bx-home-alt icon" ></i>
+                                    <span class="link">Home</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="login.html" class="nav-link">
+                                    <i class='bx bx-user icon'></i>
+                                    <span class="link">User</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class="nav-link categories-button">
+                                    <i class='bx bx-category icon'></i>
+                                    <span class="link">Catagories</span>
+                                    <span class='bx bx-chevron-down sub-icon'></span>
+                                </a>
+                                <ul class="show">
+                                    <a href="all.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">ALL</span>
+                                        </li>
+                                    </a>
+                                    <a href="bracelet.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Bracelet</span>
+                                        </li>
+                                    </a>
+                                    <a href="necklace.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Necklace</span>
+                                        </li>
+                                    </a>
+                                    <a href="ring.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Ring</span>
+                                        </li>
+                                    </a>
+                                    <a href="earring.html" class="sub-nav-link">
+                                        <li class="list">
+                                            <span class="sub-list">Earring</span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="cart1.html" class="nav-link">
+                                    <i class='bx bx-cart icon' ></i>
+                                    <span class="link">Cart</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-content">
+                        <li class="list">
+                            <a href="about_us.html" class="nav-link">
+                                <i class='bx bx-happy icon'></i>
+                                <span class="link">About Us</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-log-out icon' ></i>
+                                <span class="link">Log Out</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="overlay"></section>
+
+        <!--個人資訊-->
+        <div class="member">
+            <div class="title-container">
+                <h2 class="member-title">會員中心</h2>
+            </div>
+            <div class="member-container">
+                <section>
+                    <div class="radio-inputs">
+                        <label class="radio">
+                        <input type="radio" name="radio" checked="">
+                        <span class="name" data-link="member_info.html">個人資訊</span>
+                        </label>
+                        <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name" data-link="member_order.html">購物紀錄</span>
+                        </label>
+                            
+                        <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name" data-link="member_comment.html">歷史評論</span>
+                        </label>
+                    </div>
+
+                    <div class="logout-container">
+                        <a href="#" class="logout-style">
+                            <i class='bx bx-log-out icon'></i>&nbsp
+                            <span class="logout">Log Out</span>
+                        </a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="profile-picture">
+                            <img src="assets/Images/member.png" alt="Profile Picture">
+                            <p>個人資訊</p>
+                        </div>
+
+                        <!--個人資訊-->
+                        <form class="form-label" id="profileForm" action="" method="POST">  <!--後端傳值在這裡-->
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" value="王小明" readonly>
+                            
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" value="xiao.ming@example.com" readonly>
+                            
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" value="123-456-7890" readonly>
+                            
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" value="320 桃園縣中壢市中北路200號 " readonly>
+                            
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" value="weifefhosfi" readonly>
+                            
+                            <div class="button-container">
+                                <button type="button" id="cancelButton" onclick="cancelEdit()" style="display:none;">取消</button>
+                                <button type="submit" id="saveButton" style="display:none;">儲存</button>
+                                <button type="button" id="editButton" onclick="toggleEdit()"><iconify-icon icon="jam:write-f"></iconify-icon> &nbsp修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="wrapper">
+                    <div class="footer-button">
+                        <div class="social-icon">
+                            <i class='bx bxl-facebook'></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="footer-button">
+                        <div class="social-icon">
+                            <i class='bx bxl-twitter' ></i>
+                        </div>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="footer-button">
+                        <div class="social-icon">
+                            <i class='bx bxl-instagram' ></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="footer-button">
+                        <div class="social-icon">
+                            <i class='bx bxl-github' ></i>
+                        </div>
+                        <span>Github</span>
+                    </div>
+                    <div class="footer-button">
+                        <div class="social-icon">
+                            <i class='bx bxl-youtube' ></i>
+                        </div>
+                        <span>Youtube</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footerbottom">
+                <p>Copyright &copy;2024</p>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/Js/revise.js"></script>
+    <script src="assets/Js/datalink.js"></script>
+</body>
+</html>
+
+

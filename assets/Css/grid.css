@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    max-width: 999px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* RWD */
+@media (max-width: 900px) {
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);  /* 一行最多二個 */
+    }
+}
+
+@media (max-width: 600px) {
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);  /* 一行最多一個 */
+    }
+}
+
+.card_grid {
+    width: 100%;
+    background: black;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}

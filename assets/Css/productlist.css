@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.bgcol {
+    background-image: url(../Images/bg-03.jpg);
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+}
+
+.wrapper {
+    padding: 0 20px 0 20px;
+}
+
+section {
+    padding: 10px 8%;
+}
+
+.title-container {
+    grid-area: title;
+    display: grid;
+    grid-column: span 3;
+    cursor: auto;
+    border-bottom: 1px solid black;
+    padding: 10px 0px;
+}
+
+.title-container h2 {
+    font-size: 25px;
+    text-align: left;
+    margin: 0;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-areas: 
+    "menu title title title"
+    "menu product product product";
+
+    gap: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;  /* container置中 */
+    margin-bottom: 30px;
+}
+
+/* RWD */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "title title"
+        "product product";
+    }
+
+    .title-container {
+        grid-column: span 2;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        display: grid;
+        grid-column: span 1;
+    }
+
+    .product-navigation {
+        display: none; /* 隱藏product-navigation */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-areas: 
+        "title"
+        "product";
+    }
+
+    .title-container {
+        grid-column: span 1;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        display: grid;
+        grid-column: span 4;
+    }
+
+    .product-navigation {
+        display: none; /* 隱藏product-navigation */
+    }
+}
+
+.product-navigation {
+    grid-area: menu;
+    text-align: left;
+    padding: 25px;
+    margin: 40px 0px;
+    backdrop-filter: blur(2px);  /*側欄毛玻璃效果*/
+}
+
+.product-navigation ul li {
+    padding: 20px 0px;
+    border-bottom: 1px solid black;
+}
+
+.product-navigation li {
+    margin-bottom: 10px;
+}
+
+.product-navigation a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000; /* 文字顏色 */
+    text-decoration: none; /* 去除下劃線 */
+    transition: color 0.3s ease; /* 添加過渡效果 */
+}
+
+.product-navigation a:hover {
+    color: #868686cc;
+}
+
+.grid-container {
+    grid-area: product;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    padding: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #333;
+    padding: 15px 0;
+    margin: 0 30px;
+    border-bottom: 1px solid #dddddd;
+    transition: color 0.3s ease;
+}
+
+.card h5 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #777;
+    padding: 10px 0 30px 0;
+    transition: color 0.3s ease;
+}
+
+.card-button {
+    transform: translate(-50%, 90%);  /* 控制 button 的位置 */
+    width: 50%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.card-button i {
+    position: relative;
+    top: -.5rem;  /* icon 往上移動 */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 40%);  /* 向上移動，顯示位置 */
+    opacity: 1;
+}
+
+.card:hover h4 {
+    color: #000;
+}
+
+.card:hover h5 {
+    color: #555;
+}
+

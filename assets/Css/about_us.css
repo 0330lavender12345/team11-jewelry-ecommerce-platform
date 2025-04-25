@@ -1,0 +1,136 @@
+section {
+    padding: 10px 8%;
+}
+hr{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    margin-top: 10px;
+    margin-bottom: 10px ;
+} 
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 一行最多三個 */
+    gap: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    max-width: 999px;
+    margin: 0 auto;  /* container置中 */
+    margin-bottom: 30px;
+}
+
+/* RWD */
+@media (max-width: 900px) {
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);  /* 一行最多二個 */
+    }
+}
+
+@media (max-width: 600px) {
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);  /* 一行最多一個 */
+    }
+}
+
+
+.flip-card {
+    width: 100%;
+    background-color: transparent;
+    height: 400px; 
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.3em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flip .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    /* box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2); */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* border: 1px solid black; */
+    /* border-radius: 1rem; */
+
+}
+
+.flip-card-front {
+    color: white;
+    align-items: center;
+
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.15);
+
+    border-radius: 30px 30px 30px 30px;
+    border-right: solid 1px rgba(255,255,255,0.3) ;
+    border-bottom: solid 1px rgba(255,255,255,0.3);
+
+}
+
+.flip-card-back {
+
+    color: white;
+    transform: rotateY(180deg);
+
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.15);
+
+    border-radius: 30px 30px 30px 30px;
+    border-right: solid 1px rgba(255,255,255,0.3) ;
+    border-bottom: solid 1px rgba(255,255,255,0.3);
+}
+
+.flip-card img{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    border: 5px solid ;
+    border-color: white;
+}
+
+.reflection{
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 0;
+}
+
+.card_content{
+    display: flex;
+    margin-top: 10px;
+}
+
+.card_content i {
+    font-size: 2em;
+    justify-content: space-between;
+    margin-right: 5px;
+    
+}
+
+.card_content a {
+    color: white;
+}

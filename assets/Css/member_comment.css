@@ -1,0 +1,97 @@
+/*歷史評論*/
+.profile {
+    width: 100%;
+    background: white;
+    padding: 5px 0px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+
+    p {
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+}
+
+.profile-picture img {
+    display: flex;
+    margin: 20px auto 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.comment {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* max-width: 500px; */
+    width: 90%;
+}
+
+.detailed-ratings,
+.individual-reviews {
+    margin-bottom: 10px;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.review img {
+    width: 15%;
+    border-radius: .5rem;
+}
+
+.review span {
+    font-size: 14px;
+    color: #666;
+}
+
+.review p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+/*RWD*/
+@media (max-width: 768px) {
+    .review span {
+        font-size: 10px;
+        color: #666;
+    }
+    
+    .review p {
+        font-size: 10px;
+        color: #333;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h5 {
+        font-size: 10px;
+    }
+    .review span {
+        font-size: 8px;
+        color: #666;
+    }
+    
+    .review p {
+        font-size: 8px;
+        color: #333;
+        margin: 0;
+    }
+}
